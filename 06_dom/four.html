@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="cars">
+        <li>Tesla</li>
+    </ul>
+</body>
+<script>
+    function addcars(carName){
+        const li = document.createElement('li')
+        li.innerHTML = `${carName}`
+        document.querySelector('.cars')
+        .appendChild(li)    
+    }
+    addcars("GML")
+    addcars("BYD")
+
+    function createcars(carName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(carName))
+        document.querySelector('.cars').appendChild(li)
+    }
+    createcars("TATA")
+
+    //edit
+    const secli = document.querySelector("li:nth-child(2)")
+    // secli.innerHTML = "Mahindra"
+    const newli = document.createElement("li")
+    newli.textContent = "Mahidra"
+    
+    secli.replaceWith(newli)
+
+    //edit
+    const firstli = document.querySelector("li:first-child")
+    firstli.outerHTML = '<li>Maruti</li>'
+
+    //remove
+    const lastli = document.querySelector('li:last-child')
+    lastli.remove()
+
+
+
+
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}
+</script>
+</html>
